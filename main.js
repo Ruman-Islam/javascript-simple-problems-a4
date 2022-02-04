@@ -1,38 +1,48 @@
 
 function anaToVori(ana) {
+    if (typeof ana != 'number') {
+        return 'Please enter any number';
+    }
     const perVori = 16;
     const totalVori = ana / perVori;
     return totalVori;
 }
-const totalVori = anaToVori(64);
+const totalVori = anaToVori(10);
 
 
 
 
 function pandaCost(singaraQuantity, samuchaQuantity, jilapiQuantity) {
-    let perSingaraPrice = 7;
-    let perSamuchaPrice = 10;
-    let perJilapiPrice = 15;
-    let totalPrice = (perSingaraPrice * singaraQuantity) + (perSamuchaPrice * samuchaQuantity) + (perJilapiPrice * jilapiQuantity);
+    if (typeof singaraQuantity !== 'number' || typeof samuchaQuantity !== 'number' || typeof jilapiQuantity !== 'number') {
+        return 'Please enter any three numbers';
+    }
+    const perSingaraPrice = 7;
+    const perSamuchaPrice = 10;
+    const perJilapiPrice = 15;
+    const totalPrice = (perSingaraPrice * singaraQuantity) + (perSamuchaPrice * samuchaQuantity) + (perJilapiPrice * jilapiQuantity);
     return totalPrice;
 }
 const totalFoodCost = pandaCost();
 
 
 
+
 function picnicBudget(person) {
+    if (typeof person != 'number') {
+        return 'Please enter only numbers';
+    }
     if (person <= 100) {
-        let totalCost = person * 5000;
+        const totalCost = person * 5000;
         return totalCost;
     } else if (person <= 200) {
-        let additionalPerson = person - 100;
-        let discountCost = additionalPerson * 4000;
-        let totalCost = discountCost + 500000;
+        const additionalPerson = person - 100;
+        const discountCost = additionalPerson * 4000;
+        const totalCost = discountCost + 500000;
         return totalCost;
     } else {
-        let additionalPerson = person - 200;
-        let discountCost = additionalPerson * 3000;
-        let totalCost = discountCost + 900000;
+        const additionalPerson = person - 200;
+        const discountCost = additionalPerson * 3000;
+        const totalCost = discountCost + 900000;
         return totalCost;
     }
 }
@@ -40,4 +50,17 @@ const totalBudget = picnicBudget();
 
 
 
-// 4. 
+
+const arr = ['suvo', 'mili', 'kodu', 'modhu', 'lili', 'bili'];
+function oddFriend(names) {
+    for (const name of names) {
+        if (name.length % 2 != 0) {
+            return name;
+        }
+    }
+}
+const oddFriendName = oddFriend(arr);
+// console.log(oddFriendName);
+
+
+
