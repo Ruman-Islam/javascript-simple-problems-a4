@@ -18,7 +18,7 @@ function pandaCost(singaraQuantity, samuchaQuantity, jilapiQuantity) {
     }
     return (7 * singaraQuantity) + (10 * samuchaQuantity) + (15 * jilapiQuantity);
 }
-const totalFoodCost = pandaCost(1, 2, 1);
+const totalFoodCost = pandaCost(10, 20, 10);
 
 
 
@@ -45,7 +45,7 @@ const totalBudget = picnicBudget(201);
 
 
 
-// odd friend name
+// odd length name
 function oddFriend(names) {
     if (names.length < 2) {
         return 'Enter at least two names';
