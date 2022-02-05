@@ -1,4 +1,4 @@
-
+// ana to vori converter
 function anaToVori(ana) {
     if (typeof ana != 'number') {
         return 'Please enter any number';
@@ -7,11 +7,12 @@ function anaToVori(ana) {
     const totalVori = ana / perVori;
     return totalVori;
 }
-const totalVori = anaToVori(10);
+const totalVori = anaToVori();
 
 
 
 
+// panda calculator
 function pandaCost(singaraQuantity, samuchaQuantity, jilapiQuantity) {
     if (typeof singaraQuantity !== 'number' || typeof samuchaQuantity !== 'number' || typeof jilapiQuantity !== 'number') {
         return 'Please enter any three numbers';
@@ -27,6 +28,7 @@ const totalFoodCost = pandaCost();
 
 
 
+// budget calculator
 function picnicBudget(person) {
     if (typeof person != 'number') {
         return 'Please enter only numbers';
@@ -51,16 +53,21 @@ const totalBudget = picnicBudget();
 
 
 
-const arr = ['suvo', 'mili', 'kodu', 'modhu', 'lili', 'bili'];
+// odd friend name
 function oddFriend(names) {
-    for (const name of names) {
-        if (name.length % 2 != 0) {
-            return name;
+    if (names.length < 2) {
+        return 'Enter at least two names';
+    } else {
+        for (const name of names) {
+            if (typeof name == 'number') {
+                return 'Enter only characters';
+            }
+            if (name.length % 2 !== 0) {
+                return name;
+            }
         }
     }
 }
-const oddFriendName = oddFriend(arr);
-// console.log(oddFriendName);
-
+const oddFriendName = oddFriend(['suvo', 'mili', 'bili', 'chili', 'lili']);
 
 
