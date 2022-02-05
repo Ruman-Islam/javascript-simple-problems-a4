@@ -4,10 +4,9 @@ function anaToVori(ana) {
         return 'Please enter any number';
     }
     const perVori = 16;
-    const totalVori = ana / perVori;
-    return totalVori;
+    return ana / perVori;
 }
-const totalVori = anaToVori();
+const totalVori = anaToVori(65);
 
 
 
@@ -17,38 +16,31 @@ function pandaCost(singaraQuantity, samuchaQuantity, jilapiQuantity) {
     if (typeof singaraQuantity !== 'number' || typeof samuchaQuantity !== 'number' || typeof jilapiQuantity !== 'number') {
         return 'Please enter any three numbers';
     }
-    const perSingaraPrice = 7;
-    const perSamuchaPrice = 10;
-    const perJilapiPrice = 15;
-    const totalPrice = (perSingaraPrice * singaraQuantity) + (perSamuchaPrice * samuchaQuantity) + (perJilapiPrice * jilapiQuantity);
-    return totalPrice;
+    return (7 * singaraQuantity) + (10 * samuchaQuantity) + (15 * jilapiQuantity);
 }
-const totalFoodCost = pandaCost();
+const totalFoodCost = pandaCost(1, 2, 1);
 
 
 
 
 // budget calculator
 function picnicBudget(person) {
-    if (typeof person != 'number') {
+    if (typeof person !== 'number') {
         return 'Please enter only numbers';
     }
     if (person <= 100) {
-        const totalCost = person * 5000;
-        return totalCost;
+        return person * 5000;
     } else if (person <= 200) {
         const additionalPerson = person - 100;
         const discountCost = additionalPerson * 4000;
-        const totalCost = discountCost + 500000;
-        return totalCost;
+        return discountCost + 500000;
     } else {
         const additionalPerson = person - 200;
         const discountCost = additionalPerson * 3000;
-        const totalCost = discountCost + 900000;
-        return totalCost;
+        return discountCost + 900000;
     }
 }
-const totalBudget = picnicBudget();
+const totalBudget = picnicBudget(201);
 
 
 
@@ -69,5 +61,3 @@ function oddFriend(names) {
     }
 }
 const oddFriendName = oddFriend(['suvo', 'mili', 'bili', 'chili', 'lili']);
-
-
